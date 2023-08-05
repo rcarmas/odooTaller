@@ -5,10 +5,12 @@
     'description': """Accounting chart and localization for Ecuador""",
     'author': 'Rodney Armas',
     'depends': [
-        'account_accountant',
-        'crm'
+        'base',
+        'sale'
     ],
     'data': [
         'views/taller_res_partner.xml',
     ],
+    'installable': True,
+    'application': True,
 }
