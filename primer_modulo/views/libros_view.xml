@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista Form para libros -->
+    <record id="libros_form_view" model="ir.ui.view">
+        <field name="name">libro.form.view</field>
+        <field name="model">libros</field>
+        <field name="arch" type="xml">
+            <form string="Libro">
+                <sheet> <!-- Boostrap 12 columnas -->
+                    <group><!-- 6 columnas -->
+                       <field name="name"></field>
+                       <field name="editorial"></field>         
+                       <field name="isbn"></field>         
+                       <field name="autor_id"></field>         
+                    </group>
+                    </sheet>
+            </form>  
+        </field>
+    </record>
+
+    <record id="libros_tree_view" model="ir.ui.view">
+        <field name="name">libro.tree.view</field>
+        <field name="model">libros</field>
+        <field name="arch" type="xml">
+            <tree string="Libros">
+                <field name="name"></field>
+                <field name="editorial"></field>
+                <field name="isbn"></field>
+                <field name="autor_id"></field>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

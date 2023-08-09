@@ -1,5 +1,5 @@
 {
-    'name': 'Personalizacion - Taller',
+    'name': 'Linea de Negocio',
     'version': '0.0.0.1',
     'category': 'Partner/Localizations',
     'description': """Accounting chart and localization for Ecuador""",
@@ -7,7 +7,7 @@
     'depends': ['base', 'sale'],
 
     'data': [
-    'views/taller_res_parter.xml',
+ 
     ],
     'installable': True,
     'application': True,
