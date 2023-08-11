@@ -4,7 +4,7 @@
     'author': 'Rodney Armas',
     'category': 'General',
     'version': '1.0.0',
-    'depends': [],
+    'depends': ['mail'],
     'data': [
         'views/menu_view.xml',
         'views/libros_view.xml',
