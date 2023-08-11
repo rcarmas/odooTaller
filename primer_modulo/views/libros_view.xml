@@ -15,13 +15,14 @@
                 <sheet> <!-- Boostrap 12 columnas -->
                     <group><!-- 6 columnas -->
                        <field name="image" widget="image" class="oe_avatar"></field>
+                       <field name="supervisor" domain="[('is_supervisor','=',True)]"></field>
                        <field name="name"></field>
                        <field name="editorial"></field>         
                        <field name="isbn"></field>         
                        <field name="autor_id"></field>
                        <field name="lastname_autor"></field>
                        <field name="categoria_id"></field>
-                       <field name="description"></field>
+                       <!-- <field name="description"></field> -->
                     </group>
                 </sheet>
                 <div class="oe_chatter">

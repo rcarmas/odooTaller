@@ -4,6 +4,7 @@ class Libros(models.Model):
     _name = 'libros'
     _inherit = ['mail.thread','mail.activity.mixin']
 
+    supervisor = fields.Many2one(comodel_name='hr.employee',string="Supervisor")
     name = fields.Char(string='Nombre del Libro', required=True, tracking=True)
     editorial = fields.Char(string='Editorial', required=True)
     isbn = fields.Char(string='ISBN', required=True)
@@ -12,11 +13,11 @@ class Libros(models.Model):
     image = fields.Binary(string='Image')
     categoria_id = fields.Many2one(comodel_name="categoria.libro")
     state = fields.Selection([('draft','Borrador'),('published','Publicado')], default='draft')
-    description = fields.Char(string="Desciption", compute="_compute_description") # store=True para que se almacene en la bdd
+    # description = fields.Char(string="Desciption", compute="_compute_description") # store=True para que se almacene en la bdd
 
-    @api.depends('name', 'isbn')
-    def _compute_description(self):
-        self.description = self.name + ' | ' + self.isbn + ' | ' + self.autor_id.name + ' | ' + self.categoria_id.name
+    # @api.depends('name', 'isbn')
+    # def _compute_description(self):
+    # self.description = self.name + ' | ' + self.isbn + ' | ' + self.autor_id.name + ' | ' + self.categoria_id.name
 
     def boton_publicar(self):
         self.state = 'published'
